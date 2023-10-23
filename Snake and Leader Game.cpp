@@ -1,6 +1,37 @@
 #include<iostream>
 #include "Snake and Leader Game.h"
 #include<string>
+void Main::header(int variable, char character)
+{
+	HANDLE colors = GetStdHandle(STD_OUTPUT_HANDLE);
+	for (int i = 0; i < variable; i++)
+	{
+		cout << "\t\t\t\t";
+		for (int j = 0; j < 50; j++)
+		{s
+			Sleep(70);
+			cout << character;
+		}
+		cout << endl;
+	}
+	SetConsoleTextAttribute(colors, 10);
+	Sleep(70);
+	cout << "\t\t\t\t\t     | Snake and ladder game | " << endl;
+	SetConsoleTextAttribute(colors, 7);
+	for (int i = 0; i < variable; i++)
+	{
+		cout << "\t\t\t\t";
+		for (int j = 0; j < 50; j++)
+		{
+			Sleep(70);
+			cout << character;
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+// in the function there is the start of my program at console.
+// in which i use '#' to enhance the experience.
 int main()
 {
 	char OTHERCHOICE;
