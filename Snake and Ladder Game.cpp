@@ -979,6 +979,153 @@ void Board_Function::functions(string& win, int& turns, string& name1, string& n
 // after that, the loop stile continue even that a game would not be stop.
 // at the end of these function i show that who wins the games
 // i also use color functions for enhance the overview of the game.
+void OtherFunction::credits()
+{
+	HANDLE colors = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(colors, 13);
+	Sleep(500);
+	cout << " \t\t\t\t ___________________________________________________ " << endl;
+	Sleep(500);
+	cout << "\t\t\t\t|";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "  || It was created by Muhammad Muntazer Mehdi ||  ";
+	SetConsoleTextAttribute(colors, 13);
+	Sleep(500);
+	cout << "| " << endl;
+	Sleep(500);
+	cout << "\t\t\t\t|\t    ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "|| Student of fast university ||        ";
+	SetConsoleTextAttribute(colors, 13);
+	Sleep(500);
+	cout << "|" << endl;
+	Sleep(500);
+	cout << " \t\t\t\t|___________________________________________________|" << endl;
+	SetConsoleTextAttribute(colors, 7);
+}
+// the second part of menu in which i simply stored.
+// the information of developer of these game.
+void OtherFunction::instructions()
+{
+	HANDLE colors = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(colors, 12);
+	Sleep(500);
+	cout << "\t\t\t\t\t __________________________________________ " << endl;
+	cout << "\t\t\t\t\t|                                          | " << endl;
+	cout << "\t\t\t\t\t|       ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "These game is for 4 players        ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "| " << endl;
+	cout << "\t\t\t\t\t|            ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "First player = '$'            ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "| " << endl;
+	cout << "\t\t\t\t\t|            ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "Second player = '@'           ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "| " << endl;
+	cout << "\t\t\t\t\t|            ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "Third player = '%'            ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "| " << endl;
+	cout << "\t\t\t\t\t|            ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "Fourth player = '&'           ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "| " << endl;
+	cout << "\t\t\t\t\t| ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "The game start's when one player get 6   ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "| " << endl;
+	cout << "\t\t\t\t\t| ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "And than use T to throw it for your turn ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "| " << endl;
+	Sleep(500);
+	cout << "\t\t\t\t\t|__________________________________________|" << endl;
+	SetConsoleTextAttribute(colors, 7);
+}
+// at 3 part of menu in which i stored the
+// instructions for the users.
+// by the help of some cout statments.
+void OtherFunction::record()
+{
+	HANDLE colors = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(colors, 11);
+	cout << "\t\t\t\t    ___________________________________________ " << endl;
+	SetConsoleTextAttribute(colors, 7);
+	ifstream myfile;
+	char w;
+	myfile.open("Record.txt");
+	while (!myfile.eof())
+	{
+		myfile.get(w);
+		cout << w;
+	}
+	myfile.close();
+}
+// at these part the score and who wins.
+// there information, score and name was stored.
+// by the help of file handling.
+void OtherFunction::record2(string name1, string& name2, string& name3, string& name4, int& player1,
+	int& player2, int& player3, int& player4)
+{
+	{
+		ofstream myfile;
+		{
+			myfile.open("Record.txt", ios::app);
+			if (myfile.is_open() == true)
+			{
+				if (player1 == 100)
+				{
+					myfile << "\t\t\t\t\t\t" << name1 << " is win these game." << endl << endl;
+				}
+				else if (player2 == 100)
+				{
+					myfile << "\t\t\t\t\t\t" << name2 << " is win these game." << endl << endl;
+				}
+				else if (player3 == 100)
+				{
+					myfile << "\t\t\t\t\t\t" << name3 << " is win these game." << endl << endl;
+				}
+				else if (player4 == 100)
+				{
+					myfile << "\t\t\t\t\t\t" << name4 << " is win these game." << endl << endl;
+				}
+			}
+			myfile.close();
+		}
+	}
+}
+// in these function i use read mode of file handing.
+// first of all i save's all record in file handing.
+// the players who wons the game.
+// after that we use write or read mode in file handling.
+void OtherFunction::exist(int& E)
+{
+	cout << "\t\t\t\t\t ________________________________________ " << endl;
+	cout << "\t\t\t\t\t|                                        |" << endl;
+	cout << "\t\t\t\t\t| If you are not interested in game than |" << endl;
+	cout << "\t\t\t\t\t| Than press one to exit the game        |" << endl;
+	cout << "\t\t\t\t\t|________________________________________|" << endl;
+}
+// the fifth and last part of menu.
+// in which you simply came out from the console output.
 int main()
 {
 	char OTHERCHOICE;
