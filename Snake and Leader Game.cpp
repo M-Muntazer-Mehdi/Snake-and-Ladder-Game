@@ -32,6 +32,85 @@ void Main::header(int variable, char character)
 }
 // in the function there is the start of my program at console.
 // in which i use '#' to enhance the experience.
+void Main::menu(int& M)
+{
+	HANDLE colors = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(colors, 13);
+	cout << "\t\t\t\t\t __________________________________" << endl;
+	cout << "\t\t\t\t\t| ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "Press '1' to Play game.";
+	SetConsoleTextAttribute(colors, 13);
+	cout << "\t   | " << endl;
+	cout << "\t\t\t\t\t|__________________________________|" << endl;
+	cout << "\t\t\t\t\t| ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "Press '2' to Credits.";
+	SetConsoleTextAttribute(colors, 13);
+	cout << "\t\t   | " << endl;
+	cout << "\t\t\t\t\t|__________________________________|" << endl;
+	cout << "\t\t\t\t\t| ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "Press '3' to Instructions/Rules.";
+	SetConsoleTextAttribute(colors, 13);
+	cout << " | " << endl;
+	cout << "\t\t\t\t\t|__________________________________|" << endl;
+	cout << "\t\t\t\t\t| ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "Press '4' to Record.";
+	SetConsoleTextAttribute(colors, 13);
+	cout << "\t\t   | " << endl;
+	cout << "\t\t\t\t\t|__________________________________|" << endl;
+	cout << "\t\t\t\t\t| ";
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "Press '5' to Exit.";
+	SetConsoleTextAttribute(colors, 13);
+	cout << "\t\t   | " << endl;
+	cout << "\t\t\t\t\t|__________________________________|" << endl;
+	cout << endl;
+	SetConsoleTextAttribute(colors, 10);
+	Sleep(500);
+	cout << "\t\t\t\t\t __________________________________" << endl;
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "\t\t\t\t\t Your choice is : ";
+	cin >> M;
+	cout << endl;
+}
+// in these function i made a menu option from 1 to 5 in which different option contains play game option and 
+// other such that option. for become easy for the user.
+void Main::playernames(string& name1, string& name2, string& name3, string& name4)
+{
+	HANDLE colors = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(colors, 12);
+	Sleep(500);
+	cout << "\t\t\t\t\t __________________________________" << endl;
+	cout << "\t\t\t\t\t   " << endl;
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "\t\t\t\t\t   what is player1 name : ";
+	cin >> name1;
+	Sleep(500);
+	cout << "\t\t\t\t\t   what is player2 name : ";
+	cin >> name2;
+	Sleep(500);
+	cout << "\t\t\t\t\t   what is player3 name : ";
+	cin >> name3;
+	Sleep(500);
+	cout << "\t\t\t\t\t   what is player4 name : ";
+	cin >> name4;
+	SetConsoleTextAttribute(colors, 12);
+	Sleep(500);
+	cout << "\t\t\t\t\t __________________________________" << endl;
+	SetConsoleTextAttribute(colors, 7);
+}
+// in these function we get player names from the user.
+// in the form of string.
 int main()
 {
 	char OTHERCHOICE;
