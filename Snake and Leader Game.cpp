@@ -111,6 +111,60 @@ void Main::playernames(string& name1, string& name2, string& name3, string& name
 }
 // in these function we get player names from the user.
 // in the form of string.
+void Main::toss(string& name1, string& name2, string& name3, string& name4)
+{
+	srand((unsigned)time(0));
+	int toss = (rand() % 2);
+	HANDLE colors = GetStdHandle(STD_OUTPUT_HANDLE);
+	cout << endl;
+	SetConsoleTextAttribute(colors, 12);
+	Sleep(500);
+	cout << "\t\t\t\t\t __________________________________" << endl;
+	cout << "\t\t\t\t\t    " << endl;
+	SetConsoleTextAttribute(colors, 7);
+	Sleep(500);
+	cout << "\t\t\t\t\t\tToss : ";
+	if (toss == 1)
+	{
+		Sleep(500);
+		cout << "Head" << endl;
+		Sleep(500);
+		cout << "\t\t\t\t\t   The first turn is  : " << name1 << endl;
+		Sleep(500);
+		cout << "\t\t\t\t\t   The second turn is : " << name3 << endl;
+		Sleep(500);
+		cout << "\t\t\t\t\t   The third turn is  : " << name4 << endl;
+		Sleep(500);
+		cout << "\t\t\t\t\t   The fourth turn is : " << name2 << endl;
+	}
+	else
+	{
+		Sleep(500);
+		cout << "Tail" << endl;
+		Sleep(500);
+		cout << "\t\t\t\t\t   The first turn is  : " << name2 << endl;
+		Sleep(500);
+		cout << "\t\t\t\t\t   The second turn is : " << name3 << endl;
+		Sleep(500);
+		cout << "\t\t\t\t\t   The third turn is  : " << name4 << endl;
+		Sleep(500);
+		cout << "\t\t\t\t\t   The fourth turn is : " << name1 << endl;
+	}
+	SetConsoleTextAttribute(colors, 12);
+	Sleep(500);
+	cout << "\t\t\t\t\t __________________________________" << endl;
+	SetConsoleTextAttribute(colors, 7);
+}
+// know these part came in which the player get the toss and there number of turns.
+// in these i use random function to get head/tail.
+void  Board_Function::random(int& number)
+{
+	srand((unsigned)time(0));
+	number = (rand() % 6 + 1);
+}
+// i did not face much problem for that.
+// i made a unique or different function for these.
+// for my easiness.
 int main()
 {
 	char OTHERCHOICE;
