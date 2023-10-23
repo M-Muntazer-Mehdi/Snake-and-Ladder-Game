@@ -641,6 +641,344 @@ void Board_Function::board(int& number, string& win, int& turns, string& name1, 
 // the board for different color and by the use of if/else statment.
 // in the right side of board i made a small board in which 
 // the random number is generate by the help of srand funaction.
+void Board_Function::functions(string& win, int& turns, string& name1, string& name2, string& name3, string& name4
+	, int& player1, int& player2, int& player3, int& player4)
+{
+	bool functions = true;
+	HANDLE colors = GetStdHandle(STD_OUTPUT_HANDLE);
+	player1 = 0, player2 = 0, player3 = 0, player4 = 0;
+	int p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+	int number, counter = 0;
+	turns = 1;
+	while (functions)
+	{
+		int six = 0, hix = 0;
+		random(number);
+		board(number, win, turns, name1, name2, name3, name4, player1, player2, player3, player4);
+		if (turns == 1)
+		{
+			if (p1 == 0)
+			{
+				if (number == 6)
+					p1++;
+			}
+			turns++;
+		first:
+			if (p1 != 0)
+			{
+				if (number + player1 <= 100)
+					player1 = player1 + number;
+			}
+			if (player1 == 8)
+			{
+				player1 = 34;
+			}
+			else if (player1 == 23)
+			{
+				player1 = 2;
+			}
+			else if (player1 == 31)
+			{
+				player1 = 69;
+			}
+			else if (player1 == 46)
+			{
+				player1 = 38;
+			}
+			else if (player1 == 78)
+			{
+				player1 = 99;
+			}
+			else if (player1 == 93)
+			{
+				player1 = 6;
+			}
+			SetConsoleTextAttribute(colors, 14);
+			cout << endl;
+			Sleep(500);
+			cout << "\t\t\t\t\t\t\t player one symbol : '$'" << endl;
+			if (player1 == player2)
+				player2 = 0;
+			else if (player1 == player3)
+				player3 = 0;
+			else if (player1 == player4)
+				player4 = 0;
+			if (number == 6)
+			{
+				six++;
+				random(number);
+				Sleep(500);
+				cout << "\t\t\t\t\t\t\t|Please roll the dice again|" << endl;
+				system("pause");
+				if (six == 3)
+				{
+					Sleep(500);
+					cout << "\t\t\t\t\t\t\tBad luck! |You got three six please go to your initial position.|" << endl;
+					system("pause");
+					player1 -= 18;
+					six = 0;
+					hix++;
+				}
+				if (hix != 0)
+					goto first;
+			}
+		}
+		else if (turns == 2)
+		{
+			if (p2 == 0)
+			{
+				if (number == 6)
+					p2++;
+			}
+			turns++;
+		second:
+			if (p2 != 0)
+			{
+				if (number + player2 <= 100)
+					player2 = player2 + number;
+			}
+			if (player2 == 8)
+			{
+				player2 = 34;
+			}
+			else if (player2 == 23)
+			{
+				player2 = 2;
+			}
+			else if (player2 == 31)
+			{
+				player2 = 69;
+			}
+			else if (player2 == 46)
+			{
+				player2 = 38;
+			}
+			else if (player2 == 78)
+			{
+				player2 = 99;
+			}
+			else if (player2 == 93)
+			{
+				player2 = 6;
+			}
+			SetConsoleTextAttribute(colors, 14);
+			cout << endl;
+			Sleep(500);
+			cout << "\t\t\t\t\t\t\t player 2 symbol : '@'" << endl;
+			if (player2 == player1)
+				player1 = 0;
+			else if (player2 == player3)
+				player3 = 0;
+			else if (player2 == player4)
+				player4 = 0;
+			if (number == 6)
+			{
+				six++;
+				random(number);
+				Sleep(500);
+				cout << "\t\t\t\t\t\t\t|Please roll the dice again|" << endl;
+				if (six == 3)
+				{
+					Sleep(500);
+					cout << "\t\t\t\t\t\t\tBad luck! |You got three six please go to your initial position.|" << endl;
+					system("pause");
+					player2 -= 18;
+					six = 0;
+					hix++;
+				}
+				if (hix != 0)
+					goto first;
+			}
+		}
+		else if (turns == 3)
+		{
+			if (p3 == 0)
+			{
+				if (number == 6)
+					p3++;
+			}
+			turns++;
+		third:
+			if (p3 != 0)
+			{
+				if (number + player3 <= 100)
+					player3 = player3 + number;
+			}
+			if (player3 == 8)
+			{
+				player3 = 34;
+			}
+			else if (player3 == 23)
+			{
+				player3 = 2;
+			}
+			else if (player3 == 31)
+			{
+				player3 = 69;
+			}
+			else if (player3 == 46)
+			{
+				player3 = 38;
+			}
+			else if (player3 == 78)
+			{
+				player3 = 99;
+			}
+			else if (player3 == 93)
+			{
+				player3 = 6;
+			}
+			SetConsoleTextAttribute(colors, 14);
+			cout << endl;
+			Sleep(500);
+			cout << "\t\t\t\t\t\t\t player 3 symbol : '%'" << endl;
+			if (player3 == player2)
+				player2 = 0;
+			else if (player3 == player1)
+				player1 = 0;
+			else if (player3 == player4)
+				player4 = 0;
+			if (number == 6)
+			{
+				six++;
+				random(number);
+				Sleep(500);
+				cout << "\t\t\t\t\t\t\t|Please roll the dice again|" << endl;
+				if (six == 3)
+				{
+					Sleep(500);
+					cout << "\t\t\t\t\t\t\tBad luck! |You got three six please go to your initial position.|" << endl;
+					system("pause");
+					player3 -= 18;
+					six = 0;
+					hix++;
+				}
+				if (hix != 0)
+					goto first;
+			}
+		}
+		else if (turns == 4)
+		{
+			if (p4 == 0)
+			{
+				if (number == 6)
+					p4++;
+			}
+			turns = 1;
+		fourth:
+			if (p4 != 0)
+			{
+				if (number + player4 <= 100)
+					player4 = player4 + number;
+			}
+			if (player4 == 8)
+			{
+				player4 = 34;
+			}
+			else if (player4 == 23)
+			{
+				player4 = 2;
+			}
+			else if (player4 == 31)
+			{
+				player4 = 69;
+			}
+			else if (player4 == 46)
+			{
+				player4 = 38;
+			}
+			else if (player4 == 78)
+			{
+				player4 = 99;
+			}
+			else if (player4 == 93)
+			{
+				player4 = 6;
+			}
+			SetConsoleTextAttribute(colors, 14);
+			cout << endl;
+			Sleep(500);
+			cout << "\t\t\t\t\t\t\tplayer 4 symbol : '&'" << endl;
+			if (player4 == player2)
+				player2 = 0;
+			else if (player4 == player3)
+				player3 = 0;
+			else if (player4 == player1)
+				player1 = 0;
+			if (number == 6)
+			{
+				six++;
+				random(number);
+				Sleep(500);
+				cout << "\t\t\t\t\t\t\t|Please roll the dice again|" << endl;
+				if (six == 3)
+				{
+					Sleep(500);
+					cout << "\t\t\t\t\t\t\tBad luck! |You got three six please go to your initial position.|" << endl;
+					system("pause");
+					player4 -= 18;
+					six = 0;
+					hix++;
+				}
+				if (hix != 0)
+					goto first;
+			}
+		}
+		if (player1 < 100 && player2 < 100 && player3 < 100 && player4 < 100)
+			functions = true;
+		else
+			functions = false;
+		system("pause");
+		system("CLS");
+		cout << "\t\t\t\t\t\t\tKindly press |Entre| to roll the board." << endl;
+		SetConsoleTextAttribute(colors, 7);
+		if (player1 == 100 || player2 == 100 || player3 == 100 || player4 == 100)
+		{
+			cout << endl << endl << endl;
+			SetConsoleTextAttribute(colors, 12);
+			Sleep(500);
+			cout << "\t\t\t _______________________________________________________________________________ " << endl;
+			cout << "\t\t\t";
+			SetConsoleTextAttribute(colors, 7);
+			Sleep(500);
+			cout << "\t\tCongratulations!" << endl;
+			if (player1 == 100)
+			{
+				Sleep(500);
+				cout << "\t\t\t\tplayer1 wins whose symbols is |$| and whose name is : " << name1 << endl;
+			}
+			else if (player2 == 100)
+			{
+				Sleep(500);
+				cout << "\t\t\t\tplayer2 wins whose symbols is |@| and whose name is : " << name2 << endl;
+			}
+			else if (player3 == 100)
+			{
+				Sleep(500);
+				cout << "\t\t\t\tplayer3 wins whose symbols is |%| and whose name is : " << name3 << endl;
+			}
+			else if (player4 == 100)
+			{
+				Sleep(500);
+				cout << "\t\t\t\tplayer4 wins whose symbols is |&| and whose name is : " << name4 << endl;
+			}
+			SetConsoleTextAttribute(colors, 12);
+			Sleep(500);
+			cout << "\t\t\t _______________________________________________________________________________ " << endl;
+			SetConsoleTextAttribute(colors, 7);
+		}
+	}
+}
+// know the second most important part of over program.
+// first, i get the bool loop for continue the game.
+// if one player reached the limit of score.
+// after that i made 4 classed for 4 players.
+// and their command and instructions are store in it.
+// after that each player have reach the blue and red point.
+// get a surprice of bad or good.
+// after that, the loop stile continue even that a game would not be stop.
+// at the end of these function i show that who wins the games
+// i also use color functions for enhance the overview of the game.
 int main()
 {
 	char OTHERCHOICE;
