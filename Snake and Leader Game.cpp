@@ -165,6 +165,482 @@ void  Board_Function::random(int& number)
 // i did not face much problem for that.
 // i made a unique or different function for these.
 // for my easiness.
+void Board_Function::board(int& number, string& win, int& turns, string& name1, string& name2, string& name3, string& name4
+	, int& player1, int& player2, int& player3, int& player4)
+{
+	HANDLE colors = GetStdHandle(STD_OUTPUT_HANDLE);
+	for (int i = 0; i <= 9; i++)
+		cout << " ____";
+	cout << endl;
+	cout << "|" << 100 << " ";
+	for (int a = 99; a >= 91; a--)
+	{
+		cout << "| ";
+		if (a == player1)
+		{
+			SetConsoleTextAttribute(colors, 10);
+			cout << "\b$";
+		}
+		else
+			cout << "";
+		if (a == player2)
+		{
+			SetConsoleTextAttribute(colors, 13);
+			cout << "\b@";
+		}
+		else
+			cout << "";
+		if (a == player3)
+		{
+			SetConsoleTextAttribute(colors, 14);
+			cout << "\b%";
+		}
+		else
+			cout << "";
+		if (a == player4)
+		{
+			SetConsoleTextAttribute(colors, 11);
+			cout << "\b&";
+		}
+		else
+			cout << "";
+		if (a == 93)
+		{
+			SetConsoleTextAttribute(colors, 12);
+		}
+		cout << a << " ";
+		SetConsoleTextAttribute(colors, 7);
+	}
+	cout << "|" << endl;
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << "|____";
+	}
+	cout << "|" << endl;
+	cout << "| " << 81 << " ";
+	for (int a = 82; a <= 90; a++)
+	{
+		cout << "| ";
+		if (a == player1)
+		{
+			SetConsoleTextAttribute(colors, 10);
+			cout << "\b$";
+		}
+		else
+			cout << "";
+		if (a == player2)
+		{
+			SetConsoleTextAttribute(colors, 13);
+			cout << "\b@";
+		}
+		else
+			cout << "";
+		if (a == player3)
+		{
+			SetConsoleTextAttribute(colors, 14);
+			cout << "\b%";
+		}
+		else
+			cout << "";
+		if (a == player4)
+		{
+			SetConsoleTextAttribute(colors, 11);
+			cout << "\b&";
+		}
+		else
+			cout << "";
+		cout << a << " ";
+		SetConsoleTextAttribute(colors, 7);
+	}
+	cout << "|" << endl;
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << "|____";
+	}
+	cout << "|" << endl;
+	cout << "| " << 80 << " ";
+	for (int a = 79; a >= 71; a--)
+	{
+		cout << "| ";
+		if (a == player1)
+		{
+			SetConsoleTextAttribute(colors, 10);
+			cout << "\b$";
+		}
+		else
+			cout << "";
+		if (a == player2)
+		{
+			SetConsoleTextAttribute(colors, 13);
+			cout << "\b@";
+		}
+		else
+			cout << "";
+		if (a == player3)
+		{
+			SetConsoleTextAttribute(colors, 14);
+			cout << "\b%";
+		}
+		else
+			cout << "";
+		if (a == player4)
+		{
+			SetConsoleTextAttribute(colors, 11);
+			cout << "\b&";
+		}
+		else
+			cout << "";
+		if (a == 78)
+		{
+			SetConsoleTextAttribute(colors, 9);
+		}
+		cout << a << " ";
+		SetConsoleTextAttribute(colors, 7);
+	}
+	cout << "|" << setw(42) << " __________ " << endl;
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << "|____";
+	}
+	cout << "|" << setw(30) << "Your number is :   " << "|    ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "__";
+	SetConsoleTextAttribute(colors, 7);
+	cout << "    | " << endl;
+	cout << "| " << 61 << " ";
+	for (int a = 62; a <= 70; a++)
+	{
+		cout << "| ";
+		if (a == player1)
+		{
+			SetConsoleTextAttribute(colors, 10);
+			cout << "\b$";
+		}
+		else
+			cout << "";
+		if (a == player2)
+		{
+			SetConsoleTextAttribute(colors, 13);
+			cout << "\b@";
+		}
+		else
+			cout << "";
+		if (a == player3)
+		{
+			SetConsoleTextAttribute(colors, 14);
+			cout << "\b%";
+		}
+		else
+			cout << "";
+		if (a == player4)
+		{
+			SetConsoleTextAttribute(colors, 11);
+			cout << "\b&";
+		}
+		else
+			cout << "";
+		cout << a << " ";
+		SetConsoleTextAttribute(colors, 7);
+	}
+	cout << "|" << setw(34) << "|   ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "|  |   ";
+	SetConsoleTextAttribute(colors, 7);
+	cout << "| " << endl;
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << "|____";
+	}
+	cout << "|" << setw(34) << "|   ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "| ";
+	SetConsoleTextAttribute(colors, 14);
+	cout << number;
+	SetConsoleTextAttribute(colors, 12);
+	cout << "|   ";
+	SetConsoleTextAttribute(colors, 7);
+	cout << "| " << endl;
+	cout << "| " << 60 << " ";
+	for (int a = 59; a >= 51; a--)
+	{
+		cout << "| ";
+		if (a == player1)
+		{
+			SetConsoleTextAttribute(colors, 10);
+			cout << "\b$";
+		}
+		else
+			cout << "";
+		if (a == player2)
+		{
+			SetConsoleTextAttribute(colors, 13);
+			cout << "\b@";
+		}
+		else
+			cout << "";
+		if (a == player3)
+		{
+			SetConsoleTextAttribute(colors, 14);
+			cout << "\b%";
+		}
+		else
+			cout << "";
+		if (a == player4)
+		{
+			SetConsoleTextAttribute(colors, 11);
+			cout << "\b&";
+		}
+		else
+			cout << "";
+		if (a == 60)
+		{
+			SetConsoleTextAttribute(colors, 9);
+		}
+		cout << a << " ";
+		SetConsoleTextAttribute(colors, 7);
+	}
+	cout << "|" << setw(30) << "Your number is :   " << "|   ";
+	SetConsoleTextAttribute(colors, 12);
+	cout << "|__|";
+	SetConsoleTextAttribute(colors, 7);
+	cout << "   | " << endl;
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << "|____";
+	}
+	cout << "|" << setw(42) << "|__________|" << endl;
+	cout << "| " << 41 << " ";
+	for (int a = 42; a <= 50; a++)
+	{
+		cout << "| ";
+		if (a == player1)
+		{
+			SetConsoleTextAttribute(colors, 10);
+			cout << "\b$";
+		}
+		else
+			cout << "";
+		if (a == player2)
+		{
+			SetConsoleTextAttribute(colors, 13);
+			cout << "\b@";
+		}
+		else
+			cout << "";
+		if (a == player3)
+		{
+			SetConsoleTextAttribute(colors, 14);
+			cout << "\b%";
+		}
+		else
+			cout << "";
+		if (a == player4)
+		{
+			SetConsoleTextAttribute(colors, 11);
+			cout << "\b&";
+		}
+		else
+			cout << "";
+		if (a == 46)
+		{
+			SetConsoleTextAttribute(colors, 12);
+		}
+		cout << a << " ";
+		SetConsoleTextAttribute(colors, 7);
+	}
+	cout << "|" << endl;
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << "|____";
+	}
+	cout << "|" << endl;
+	cout << "| " << 40 << " ";
+	for (int a = 39; a >= 31; a--)
+	{
+		cout << "| ";
+		if (a == player1)
+		{
+			SetConsoleTextAttribute(colors, 10);
+			cout << "\b$";
+		}
+		else
+			cout << "";
+		if (a == player2)
+		{
+			SetConsoleTextAttribute(colors, 13);
+			cout << "\b@";
+		}
+		else
+			cout << "";
+		if (a == player3)
+		{
+			SetConsoleTextAttribute(colors, 14);
+			cout << "\b%";
+		}
+		else
+			cout << "";
+		if (a == player4)
+		{
+			SetConsoleTextAttribute(colors, 11);
+			cout << "\b&";
+		}
+		else
+			cout << "";
+		if (a == 31)
+		{
+			SetConsoleTextAttribute(colors, 9);
+		}
+		cout << a << " ";
+		SetConsoleTextAttribute(colors, 7);
+	}
+	cout << "|" << endl;
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << "|____";
+	}
+	cout << "|" << endl;
+	cout << "| " << 21 << " ";
+	for (int a = 22; a <= 30; a++)
+	{
+		cout << "| ";
+		if (a == player1)
+		{
+			SetConsoleTextAttribute(colors, 10);
+			cout << "\b$";
+		}
+		else
+			cout << "";
+		if (a == player2)
+		{
+			SetConsoleTextAttribute(colors, 13);
+			cout << "\b@";
+		}
+		else
+			cout << "";
+		if (a == player3)
+		{
+			SetConsoleTextAttribute(colors, 14);
+			cout << "\b%";
+		}
+		else
+			cout << "";
+		if (a == player4)
+		{
+			SetConsoleTextAttribute(colors, 11);
+			cout << "\b&";
+		}
+		else
+			cout << "";
+		if (a == 23)
+		{
+			SetConsoleTextAttribute(colors, 12);
+		}
+		cout << a << " ";
+		SetConsoleTextAttribute(colors, 7);
+	}
+	cout << "|" << endl;
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << "|____";
+	}
+	cout << "|" << endl;
+	cout << "| " << 20 << " ";
+	for (int a = 19; a >= 11; a--)
+	{
+		cout << "| ";
+		if (a == player1)
+		{
+			SetConsoleTextAttribute(colors, 10);
+			cout << "\b$";
+		}
+		else
+			cout << "";
+		if (a == player2)
+		{
+			SetConsoleTextAttribute(colors, 13);
+			cout << "\b@";
+		}
+		else
+			cout << "";
+		if (a == player3)
+		{
+			SetConsoleTextAttribute(colors, 14);
+			cout << "\b%";
+		}
+		else
+			cout << "";
+		if (a == player4)
+		{
+			SetConsoleTextAttribute(colors, 11);
+			cout << "\b&";
+		}
+		else
+			cout << "";
+		cout << a << " ";
+		SetConsoleTextAttribute(colors, 7);
+	}
+	cout << "|" << endl;
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << "|____";
+	}
+	cout << "|" << endl;
+	cout << "|  " << 1 << " ";
+	for (int a = 2; a <= 9; a++)
+	{
+		cout << "|  ";
+		if (a == player1)
+		{
+			SetConsoleTextAttribute(colors, 10);
+			cout << "\b$";
+		}
+		else
+			cout << "";
+		if (a == player2)
+		{
+			SetConsoleTextAttribute(colors, 13);
+			cout << "\b@";
+		}
+		else
+			cout << "";
+		if (a == player3)
+		{
+			SetConsoleTextAttribute(colors, 14);
+			cout << "\b%";
+		}
+		else
+			cout << "";
+		if (a == player4)
+		{
+			SetConsoleTextAttribute(colors, 11);
+			cout << "\b&";
+		}
+		else
+			cout << "";
+		if (a == 8)
+		{
+			SetConsoleTextAttribute(colors, 9);
+		}
+		cout << a << " ";
+		SetConsoleTextAttribute(colors, 7);
+	}
+	cout << "|";
+	cout << " " << 10 << " |" << endl;
+	for (int i = 0; i <= 9; i++)
+	{
+		cout << "|____";
+	}
+	cout << "|" << endl;
+}
+// that is the first most important part of over program.
+// in these first of all we made board of 10\10 by the help
+// of for loop. after these we change color of some part.
+// to made leader and snake coloring can be chane with the
+// help of 'HANDLE' / 'window.h' and 'color(12)'.
+// after these we use palyer's symbol and show on
+// the board for different color and by the use of if/else statment.
+// in the right side of board i made a small board in which 
+// the random number is generate by the help of srand funaction.
 int main()
 {
 	char OTHERCHOICE;
